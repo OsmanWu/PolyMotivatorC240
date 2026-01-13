@@ -390,11 +390,6 @@ h1, h2, h3, h4, h5, h6 {
   text-align: left;
 }
 
-/* Content Wrapper for hiding main content until onboarding */
-.content-wrapper {
-  /* Placeholder for showing/hiding main content sections */
-}
-
 .content-wrapper.hidden {
   display: none;
 }
@@ -430,6 +425,9 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: var(--space-8);
   text-align: center;
   color: var(--gray-900);
+  /* Make legend appear inside the fieldset box */
+  float: left;
+  width: 100%;
 }
 
 .options-grid {
@@ -437,6 +435,7 @@ h1, h2, h3, h4, h5, h6 {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: var(--space-4);
   margin-bottom: var(--space-8);
+  clear: both; /* Clear the float from the legend */
 }
 
 .option-card {
@@ -674,6 +673,24 @@ h1, h2, h3, h4, h5, h6 {
 .dashboard-header {
   text-align: center;
   margin-bottom: var(--space-12);
+}
+
+.retake-button {
+  margin-top: var(--space-4);
+  padding: var(--space-3) var(--space-6);
+  background: var(--gray-200);
+  color: var(--gray-700);
+  border: none;
+  border-radius: var(--border-radius-md);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-size: var(--font-size-sm);
+}
+
+.retake-button:hover {
+  background: var(--gray-300);
+  transform: translateY(-1px);
 }
 
 .dashboard-title {

@@ -171,6 +171,12 @@ class PolyMotivator {
     if (saveTipBtn) {
       saveTipBtn.addEventListener('click', () => this.saveTip());
     }
+
+    // Retake form button
+    const retakeBtn = document.getElementById('retake-form');
+    if (retakeBtn) {
+      retakeBtn.addEventListener('click', () => this.retakeForm());
+    }
   }
 
   
@@ -553,6 +559,43 @@ class PolyMotivator {
     });
 
     this.announceToScreenReader('Welcome to your personalized dashboard! Your motivation and study tips are ready.');
+  }
+
+  /**
+   * Allow user to retake the form
+   */
+  retakeForm() {
+    // Clear saved preferences
+    localStorage.removeItem('polymotivator_preferences');
+    this.userPreferences = null;
+    
+    // Reset form
+    const form = document.getElementById('onboarding-form');
+    if (form) {
+      form.reset();
+    }
+    
+    // Reset to step 1
+    this.currentStep = 1;
+    document.querySelectorAll('.form-step').forEach(step => {
+      step.classList.remove('active');
+    });
+    const firstStep = document.getElementById('step-1');
+    if (firstStep) {
+      firstStep.classList.add('active');
+    }
+    
+    // Show onboarding, hide dashboard
+    this.hideSection('dashboard');
+    this.showSection('onboarding');
+    
+    // Scroll to onboarding
+    document.getElementById('onboarding').scrollIntoView({ 
+      behavior: 'smooth',
+      block: 'start'
+    });
+    
+    this.announceToScreenReader('Form reset. You can now retake the survey.');
   }
 
   /**

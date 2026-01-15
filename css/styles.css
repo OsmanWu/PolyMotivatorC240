@@ -402,6 +402,7 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: var(--shadow-md);
   margin-bottom: var(--space-6);
   display: none;
+  overflow: visible;
 }
 
 .form-step.active {
@@ -422,11 +423,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .step-title {
   font-size: var(--font-size-2xl);
-  margin-bottom: var(--space-8);
+  margin: 0 0 var(--space-8) 0;
   text-align: center;
   color: var(--gray-900);
   display: block;
   width: 100%;
+  padding: 0;
 }
 
 .options-grid {

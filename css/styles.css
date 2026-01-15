@@ -425,8 +425,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: var(--space-8);
   text-align: center;
   color: var(--gray-900);
-  /* Make legend appear inside the fieldset box */
-  float: left;
+  display: block;
   width: 100%;
 }
 
@@ -435,7 +434,6 @@ h1, h2, h3, h4, h5, h6 {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: var(--space-4);
   margin-bottom: var(--space-8);
-  clear: both; /* Clear the float from the legend */
 }
 
 .option-card {

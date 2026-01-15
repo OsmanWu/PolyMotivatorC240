@@ -19,7 +19,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <title>PolyMotivator - Your Study Journey Companion</title>
+    <title>PolyMotivator - Preparation Tips</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -30,16 +30,16 @@
     <header class="header" role="banner">
         <div class="container">
             <div class="header-content">
-                <a href="#" class="logo" id="logo">
+                <a href="index.html" class="logo" id="logo">
                     <img src="PolymotivatorLogo.png" alt="PolyMotivator Logo" class="logo-image">
                 </a>
                 <nav class="nav" role="navigation" aria-label="Main navigation">
                     <ul class="nav-list">
-                        <li><a href="https://23036113-trexi.github.io/polymotivator/" class="nav-link">Interest Quiz (Trexi)</a></li>
-                        <li><a href="https://ethanshenyuheng.github.io/PolyMotivator/" class="nav-link">Strength Assessment (Ethan)</a></li>
-                        <li><a href="https://23020720karo.github.io/PolyMotivator/" class="nav-link">Polytechnic Explorer (Karolyn)</a></li>
+                        <li><a href="#interest-quiz" class="nav-link">Interest Quiz (Trexi)</a></li>
+                        <li><a href="#strength-assessment" class="nav-link">Strength Assessment (Ethan)</a></li>
+                        <li><a href="#poly-explorer" class="nav-link">Polytechnic Explorer (Karolyn)</a></li>
                         <li><a href="PrepTips.html" class="nav-link">Preparation Tips (Osman)</a></li>
-                        <li><a href="https://natasha-lim.github.io/PolyMotivator-NatashaLim/" class="nav-link">Pathway Guide (Natasha)</a></li>
+                        <li><a href="#pathway-guide" class="nav-link">Pathway Guide (Natasha)</a></li>
                     </ul>
                 </nav>
             </div>
@@ -48,25 +48,246 @@
 
     <!-- Main Content -->
     <main id="main-content" class="main" role="main">
-        <!-- Homepage Section -->
-        <section id="homepage" class="hero" aria-labelledby="hero-title">
+        <!-- Onboarding Form -->
+        <section class="onboarding" id="onboarding" aria-labelledby="onboarding-title">
             <div class="container">
-                <div class="hero-content">
-                    <div class="hero-card" role="region" aria-label="PolyMotivator intro">
-                        <h2 id="hero-title" class="hero-title">
-                            Welcome to <span class="highlight">PolyMotivator</span>
-                        </h2>
-                        <p class="hero-subtitle">
-                            Your <span class="highlight">AI-powered</span> guide to discovering your <span class="highlight">interests</span>, strengths, and the best <span class="highlight">polytechnic pathways</span> for you.
+                <div class="onboarding-content">
+                    <h3 id="onboarding-title" class="section-title">Let's get to know you better!</h3>
+                    <p class="section-subtitle">This helps us give you the most relevant tips and motivation</p>
+                    
+                    <form class="onboarding-form" id="onboarding-form" aria-describedby="form-description">
+                        <p id="form-description" class="sr-only">
+                            Complete this quick form to personalize your PolyMotivator experience
                         </p>
-                        <button class="cta-button" id="get-started-btn" aria-describedby="cta-description">
-                            BEGIN
-                        </button>
-                        <p id="cta-description" class="cta-description">
-                            Takes 30 seconds to set up your personalized experience
-                        </p>
-                    </div>
+
+                        <!-- Step 1: Course Interest -->
+                        <fieldset class="form-step active" id="step-1">
+                            <legend class="step-title">What's your dream polytechnic cluster?</legend>
+                            <div class="options-grid">
+                                <label class="option-card">
+                                    <input type="radio" name="course-cluster" value="engineering" class="sr-only">
+                                    <span class="option-content">
+                                        <span class="option-icon" aria-hidden="true">⚙️</span>
+                                        <span class="option-title">Engineering</span>
+                                        <span class="option-desc">Build the future with tech and innovation</span>
+                                    </span>
+                                </label>
+                                <label class="option-card">
+                                    <input type="radio" name="course-cluster" value="business" class="sr-only">
+                                    <span class="option-content">
+                                        <span class="option-icon" aria-hidden="true">💼</span>
+                                        <span class="option-title">Business</span>
+                                        <span class="option-desc">Lead teams and create opportunities</span>
+                                    </span>
+                                </label>
+                                <label class="option-card">
+                                    <input type="radio" name="course-cluster" value="design" class="sr-only">
+                                    <span class="option-content">
+                                        <span class="option-icon" aria-hidden="true">🎨</span>
+                                        <span class="option-title">Design & Media</span>
+                                        <span class="option-desc">Express creativity and tell stories</span>
+                                    </span>
+                                </label>
+                                <label class="option-card">
+                                    <input type="radio" name="course-cluster" value="health" class="sr-only">
+                                    <span class="option-content">
+                                        <span class="option-icon" aria-hidden="true">🏥</span>
+                                        <span class="option-title">Health Sciences</span>
+                                        <span class="option-desc">Care for others and make a difference</span>
+                                    </span>
+                                </label>
+                            </div>
+                            <button type="button" class="next-button" data-next="step-2">Next Step</button>
+                        </fieldset>
+
+                        <!-- Step 2: Learning Style -->
+                        <fieldset class="form-step" id="step-2">
+                            <legend class="step-title">How do you learn best?</legend>
+                            <div class="options-grid">
+                                <label class="option-card">
+                                    <input type="radio" name="learning-style" value="visual" class="sr-only">
+                                    <span class="option-content">
+                                        <span class="option-icon" aria-hidden="true">👀</span>
+                                        <span class="option-title">Visual</span>
+                                        <span class="option-desc">Charts, diagrams, and colorful notes</span>
+                                    </span>
+                                </label>
+                                <label class="option-card">
+                                    <input type="radio" name="learning-style" value="hands-on" class="sr-only">
+                                    <span class="option-content">
+                                        <span class="option-icon" aria-hidden="true">✋</span>
+                                        <span class="option-title">Hands-On</span>
+                                        <span class="option-desc">Practice, experiments, and doing</span>
+                                    </span>
+                                </label>
+                                <label class="option-card">
+                                    <input type="radio" name="learning-style" value="social" class="sr-only">
+                                    <span class="option-content">
+                                        <span class="option-icon" aria-hidden="true">👥</span>
+                                        <span class="option-title">Social</span>
+                                        <span class="option-desc">Group study and discussions</span>
+                                    </span>
+                                </label>
+                                <label class="option-card">
+                                    <input type="radio" name="learning-style" value="structured" class="sr-only">
+                                    <span class="option-content">
+                                        <span class="option-icon" aria-hidden="true">📋</span>
+                                        <span class="option-title">Structured</span>
+                                        <span class="option-desc">Step-by-step plans and schedules</span>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="step-buttons">
+                                <button type="button" class="back-button" data-back="step-1">Back</button>
+                                <button type="button" class="next-button" data-next="step-3">Next Step</button>
+                            </div>
+                        </fieldset>
+
+                        <!-- Step 3: Confidence Level -->
+                        <fieldset class="form-step" id="step-3">
+                            <legend class="step-title">How are you feeling about your polytechnic journey?</legend>
+                            <div class="confidence-slider">
+                                <label for="confidence-level" class="slider-label">
+                                    <span class="slider-start">A bit nervous 😰</span>
+                                    <span class="slider-end">Super confident! 🚀</span>
+                                </label>
+                                <input 
+                                    type="range" 
+                                    id="confidence-level" 
+                                    name="confidence-level" 
+                                    min="1" 
+                                    max="5" 
+                                    value="3" 
+                                    class="confidence-range"
+                                    aria-describedby="confidence-value"
+                                >
+                                <output id="confidence-value" class="confidence-output" for="confidence-level">
+                                    You're doing great! 😊
+                                </output>
+                            </div>
+                            <div class="step-buttons">
+                                <button type="button" class="back-button" data-back="step-2">Back</button>
+                                <button type="submit" class="submit-button">Start My Journey!</button>
+                            </div>
+                        </fieldset>
+                    </form>
                 </div>
+            </div>
+        </section>
+
+        <!-- Dashboard (Initially Hidden) -->
+        <section class="dashboard hidden" id="dashboard" aria-labelledby="dashboard-title">
+            <div class="container">
+                <div class="dashboard-header">
+                    <h2 id="dashboard-title" class="dashboard-title">
+                        <span id="user-greeting">Hey there, future polytechnic star! 🌟</span>
+                    </h2>
+                    <p class="dashboard-subtitle" id="personalized-message">
+                        Here's your personalized motivation and study guidance
+                    </p>
+                    <button class="retake-button" id="retake-form">Retake Survey 🔄</button>
+                </div>
+
+                <div class="dashboard-grid">
+                    <!-- Daily Motivation Card -->
+                    <article class="motivation-card" id="motivation" aria-labelledby="motivation-title">
+                        <header class="card-header">
+                            <h3 id="motivation-title" class="card-title">
+                                <span class="card-icon" aria-hidden="true">💪</span>
+                                Your Daily Boost
+                            </h3>
+                            <button class="refresh-button" id="refresh-motivation" aria-label="Get new motivation">
+                                🔄
+                            </button>
+                        </header>
+                        <div class="card-content">
+                            <blockquote class="motivation-quote" id="daily-motivation">
+                                Every expert was once a beginner. You've got this! 🎯
+                            </blockquote>
+                            <p class="motivation-tip" id="motivation-context">
+                                Remember: Your polytechnic journey is unique. Focus on your own progress, not comparing yourself to others.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Study Tips Card -->
+                    <article class="study-card" id="study-tips" aria-labelledby="study-title">
+                        <header class="card-header">
+                            <h3 id="study-title" class="card-title">
+                                <span class="card-icon" aria-hidden="true">📚</span>
+                                Smart Study Tip
+                            </h3>
+                            <button class="refresh-button" id="refresh-study" aria-label="Get new study tip">
+                                🔄
+                            </button>
+                        </header>
+                        <div class="card-content">
+                            <h4 class="tip-title" id="study-tip-title">The 25-5 Rule</h4>
+                            <p class="tip-description" id="study-tip-description">
+                                Study for 25 minutes, then take a 5-minute break. Your brain will thank you! 
+                                Try listening to your favorite song during breaks. 🎵
+                            </p>
+                            <div class="tip-actions">
+                                <button class="action-button" id="start-timer">Start 25min Timer</button>
+                                <button class="action-button secondary" id="save-tip">Save This Tip</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Progress Tracker -->
+                    <article class="progress-card" id="progress" aria-labelledby="progress-title">
+                        <header class="card-header">
+                            <h3 id="progress-title" class="card-title">
+                                <span class="card-icon" aria-hidden="true">📈</span>
+                                Your Progress
+                            </h3>
+                        </header>
+                        <div class="card-content">
+                            <div class="progress-stats">
+                                <div class="stat">
+                                    <span class="stat-number" id="days-active">1</span>
+                                    <span class="stat-label">Days Active</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number" id="tips-viewed">3</span>
+                                    <span class="stat-label">Tips Viewed</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number" id="motivation-streak">1</span>
+                                    <span class="stat-label">Day Streak</span>
+                                </div>
+                            </div>
+                            <div class="achievement-badge" id="latest-achievement">
+                                🏅 Welcome Badge Earned!
+                            </div>
+                        </div>
+                    </article>
+
+                    
+                </div>
+
+                <!-- Quick Actions -->
+                <section class="quick-actions" aria-labelledby="actions-title">
+                    <h3 id="actions-title" class="actions-title">Quick Actions</h3>
+                    <div class="actions-grid">
+                        <button class="action-card" id="exam-prep">
+                            <span class="action-icon" aria-hidden="true">📝</span>
+                            <span class="action-text">Exam Prep Checklist</span>
+                        </button>
+                        <button class="action-card" id="study-planner">
+                            <span class="action-icon" aria-hidden="true">📅</span>
+                            <span class="action-text">Study Planner</span>
+                        </button>
+                        <button class="action-card" id="mood-check">
+                            <span class="action-icon" aria-hidden="true">😊</span>
+                            <span class="action-text">Mood Check-in</span>
+                        </button>
+                        <button class="action-card" id="resources">
+                            <span class="action-icon" aria-hidden="true">📖</span>
+                            <span class="action-text">Study Resources</span>
+                        </button>
+                    </div>
+                </section>
             </div>
         </section>
     </main>
@@ -95,5 +316,14 @@
 
     <!-- JavaScript -->
     <script src="js/app.js"></script>
+
+    <!-- Flowise Chatbot -->
+    <script type="module">
+        import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+        Chatbot.init({
+            chatflowid: "8d6e55b8-d94b-439d-9624-2bc7fc866c98",
+            apiHost: "https://flowise-production-870f.up.railway.app",
+        })
+    </script>
 </body>
 </html>

@@ -402,7 +402,7 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: var(--shadow-md);
   margin-bottom: var(--space-6);
   display: none;
-  overflow: visible;
+  position: relative;
 }
 
 .form-step.active {
@@ -429,6 +429,7 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   width: 100%;
   padding: 0;
+  position: static;
 }
 
 .options-grid {
